@@ -1,0 +1,72 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+:root{
+    --darkblue: #226;
+    --ownYellow: rgb(252, 213, 97);
+}
+body{
+    font-style:'comfortaa', cursive, sans-serif ;
+}
+/*Header*/
+.navbar{
+    background-color:var(--darkblue);
+}
+.navbar-item{
+    color:white;
+    font-weight:35px;
+    height:8vh;
+    font-weight:bold;
+    transition:0.2s ease-in-out all;
+}
+.navbar-item:hover{
+    color: var(--ownYellow) !important;
+}
+/*Main*/
+.main-content{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.crud-container{
+    border: 1px solid #ccc;
+    width: 60%;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 20px 0.5px #3337;
+    border-radius: 0.5rem;
+}
+.crud-header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: solid 1px #222;
+    padding:0.5rem;
+}
+.button span{
+    margin-left:5px;
+}
+.btn-flex{
+    display:flex;
+}
+.btn-option{
+    width: 10px;
+    margin: 0px 2px;
+}
+.th{
+    text-align: center;
+}
+
+@media screen and (max-width:700px) {
+    .crud-header{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .crud-header h1{
+        padding-bottom:5px;
+    }
+    .crud-container{
+        width: 90%;
+    }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/48568e396a.js" crossorigin="anonymous"></script>
+    <title>Modal Implementation</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="#">
+                Modal Implementation
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+      <div class="crud-container">
+        <section class="crud-header">
+          <h1>Registro de Estudiantes</h1>
+          <button class="button is-success is-small " id="openModal">
+            <i class="fa-solid fa-plus"></i> 
+            <span>Nuevos Estudiantes</span>
+          </button>
+        </section>
+       <section class="table-font">
+        <div class="table-container">
+          <table class="table" id="tableStudents">
+            <thead>
+              <tr>
+                <th class="th">Opciones</th>
+                <th class="th">Nombre</th>
+                <th class="th">Apellido</th>
+                <th class="th">Celular</th>
+                <th class="th">Email</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td class="btn-flex">
+                  <button class="button is-warning is-small btn-option ">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="button is-danger is-small btn-option ">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </th>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       </section>
+      </div>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal-background">
+        <form id="modalForm">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Nuevo Estudiante</p>
+            <button class="delete" aria-label="close" id="closeModal"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="field">
+              <label>Nombre</label>
+              <p class="control has-icons-left">
+                <input name="nombre" class="input" type="text" placeholder="Nombre"  required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-circle-info"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Apellido</label>
+              <p class="control has-icons-left">
+                <input name="apellido" class="input" type="text" placeholder="Apellido" required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-circle-info"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Celular</label>
+              <p class="control has-icons-left">
+                <input name="celular" class="input" type="tel" placeholder="Celular"  required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <p class="control has-icons-left has-icons-right">
+                <input name="email" class="input" type="email" placeholder="Email"  required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label> Descripción</label>
+              <p class="control has-icons-left has-icons-right">
+                <textarea class="textarea" name="descripcion" placeholder="">Descripción</textarea>
+              </p>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button type="submit" class="button is-success" id="saveModal">Registrar</button>
+          </footer>
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="modalUpdate">
+      <div class="modal-background">
+        <form id="modalFormUpdate">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Actualizar Estudiante</p>
+            <button class="delete" aria-label="close" id="closeModalUpdate"></button>
+          </header>
+          <section class="modal-card-body">
+           <!-- content -->
+            <div class="field">
+              <label>Nombre</label>
+              <p class="control has-icons-left">
+                <input name="nombreUpdate" class="input" type="text" placeholder="Nombre"  required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-circle-info"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Apellido</label>
+              <p class="control has-icons-left">
+                <input name="apellidoUpdate" class="input" type="text" placeholder="Apellido" required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-circle-info"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Celular</label>
+              <p class="control has-icons-left">
+                <input name="celularUpdate" class="input" type="tel" placeholder="Celular"  required>
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <p class="control has-icons-left has-icons-right">
+                <input name="emailUpdate" class="input" type="email" placeholder="Email"  required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label> Descripción</label>
+              <p class="control has-icons-left has-icons-right">
+                <textarea class="textarea" name="descripcionUpdate" placeholder="">Descripción</textarea>
+              </p>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button type="submit" class="button is-success" id="saveModalUpdate">Actualizar</button>
+          </footer>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./jscript/app.js"></script>
+</body>
+</html>
