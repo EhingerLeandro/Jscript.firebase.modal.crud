@@ -24,6 +24,7 @@
         </nav>
     </header>
     <main class="main-content">
+      <!-- Aquí se crea el contenedor donde se aloja la tabla-->
       <div class="crud-container">
         <section class="crud-header">
           <h1>Registro de Estudiantes</h1>
@@ -32,6 +33,7 @@
             <span>Nuevos Estudiantes</span>
           </button>
         </section>
+        <!--En esta sección se comienza la tabla-->
        <section class="table-font">
         <div class="table-container">
           <table class="table" id="tableStudents">
@@ -54,11 +56,10 @@
                     <i class="fa-solid fa-trash"></i>
                   </button>
                 </th>
-                <td>........</td>
-                <td>........</td>
-                <td>........</td>
-                <td>........</td>
-                <td>........</td>
+                <td>............</td>
+                <td>............</td>
+                <td>............</td>
+                <td>............</td>
               </tr>
             </tbody>
           </table>
@@ -66,7 +67,7 @@
        </section>
       </div>
     </main>
-
+    <!--En esta parte se muestra el modal para Registrar estudiantes-->
     <div class="modal" id="modal">
       <div class="modal-background">
         <form id="modalForm">
@@ -121,13 +122,15 @@
             </div>
           </section>
           <footer class="modal-card-foot">
-            <button type="submit" class="button is-success" id="saveModal">Registrar</button>
+            <button type="submit" class="button is-success" id="saveModal">
+              Registrar
+            </button>
           </footer>
         </div>
         </form>
       </div>
     </div>
-
+    <!-- En esta parte se utiliza un modal que sirve para ACTULAIZAR los estudiantes-->
     <div class="modal" id="modalUpdate">
       <div class="modal-background">
         <form id="modalFormUpdate">
